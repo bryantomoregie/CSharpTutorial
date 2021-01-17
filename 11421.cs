@@ -42,16 +42,16 @@ namespace CSharpTutorial
             Console.WriteLine(number);
         }
 
-        public static void NonFactorial()
+        public static void NonRecursion()
         {
             Console.WriteLine("Enter number:");
             string input = Console.ReadLine();
             int number = Int32.Parse(input);
             int n = number;
 
-            while(number >= 1)
+            while(number >= 2)
             {
-                n *= n - 1;
+                n *= number - 1;
                 number--;
             }
             Console.WriteLine($"{input}! = {n}");
@@ -98,9 +98,7 @@ namespace CSharpTutorial
                 }
             }
 
-            Console.WriteLine("My result:" + numbers[6]);
-
-            Console.WriteLine(max);
+            Console.WriteLine("My result:" + max);
         }
 
         public static void ReverseString()
@@ -112,7 +110,53 @@ namespace CSharpTutorial
             Array.Reverse(array);
             Console.WriteLine(array);
         }
+
+        public static void Three()
+        {
+            Console.WriteLine("Please enter at least 5 comma seperated number");
+
+            string input = Console.ReadLine();
+            List<string> list = new List<string>();
+            List<string> list2 = new List<string>();
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if(input[i] == ' ')
+                {
+                    continue;
+                }
+                if (Char.IsNumber(input, i))
+                {
+                    sb.Append(input[i]);
+                }else if (input[i] == ',')
+                {
+                    list.Add(sb.ToString());
+                    sb.Clear();
+                }
+                if (i == input.Length-1)
+                {
+                    list.Add(sb.ToString());
+                }
+            }
+
+            string[] array = list.ToArray();
+            //Array.Sort(array);
+
+           for(var i = 0; i < array.Length; i++)
+            {
+                Char.GetNumericValue(array[i], i);
+            }
+
+
+
+        }
     }
 }
 
-//for each number divisible by 3 console.writeline 
+/*
+ I need to loop thru this string, if char is a number, check the next char.
+If char I want to concat?
+Turn that concat into a int, and stick it into an array.
+Maybe use a method to order the array and then return 
+*/

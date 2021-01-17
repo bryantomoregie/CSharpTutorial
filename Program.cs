@@ -6,7 +6,11 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            _11421.MaxNumber();
+            Person person = new Person("Bryant", 29);
+            person.Introduction();
+          
+
+            
         }
     }
 }
