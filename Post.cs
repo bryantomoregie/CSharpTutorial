@@ -6,6 +6,35 @@ namespace CSharpTutorial
 {
     class Post
     {
+        public Post(string title, string description)
+        {
+            Title = title;
+            Description = description;
+            DateTime = DateTime.Now;
+        }
+
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DateTime { get; set; }
+        
+        private int vote = 0;
+
+        public int Vote
+        {
+            get { return vote ; }
+            
+        }
+
+        public void UpVote()
+        {
+            vote++;
+        }
+
+        public void DownVote()
+        {
+            vote--;
+        }
+
 
     }
 }
@@ -22,4 +51,9 @@ ability to set the Vote property from the outside, because otherwise, you may
 accidentally change the votes of a class to 0 or to a random number. And this
 is how we create bugs in our programs. The class should always protect its 
 state and hide its implementation detail. 
+
+properties for title, description, date/time, votes
+Methods to upvote, downvote, see how many votes, 
+Shoud
+
  */
