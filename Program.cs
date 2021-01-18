@@ -6,7 +6,7 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            _11421.Vowels();
+            _11821.Matrix(3);
           
 
             
