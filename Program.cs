@@ -6,8 +6,7 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Person person = new Person("Bryant", 29);
-            person.Introduction();
+            _11421.Vowels();
           
 
             
