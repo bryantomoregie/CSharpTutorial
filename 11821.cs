@@ -17,7 +17,7 @@ namespace CSharpTutorial
 
             //    }
             //}
-            var counter = 0;
+           
             for (int i = 0; i < array2d.GetLength(0); i++)
             {
                 for (int j = 0; j < array2d.GetLength(1); j++)
