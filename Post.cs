@@ -8,13 +8,28 @@ namespace CSharpTutorial
     {
         public Post(string title, string description)
         {
-            Title = title;
-            Description = description;
+            _title = title;
+            _description = description;
             DateTime = DateTime.Now;
         }
 
-        public string Title { get; set; }
-        public string Description { get; set; }
+
+        private string _title;
+
+        public string Title
+        {
+            get { return _title; }
+            
+        }
+
+        private string _description;
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+
         public DateTime DateTime { get; set; }
         
         private int vote = 0;
@@ -22,8 +37,8 @@ namespace CSharpTutorial
         public int Vote
         {
             get { return vote ; }
-            
         }
+
 
         public void UpVote()
         {
@@ -35,7 +50,30 @@ namespace CSharpTutorial
             vote--;
         }
 
+        public void EditTitle()
+        {
+            Console.WriteLine(Title);
+            Console.WriteLine("Edit title and press enter");
+            _title = Console.ReadLine();
+        }
 
+        public void EditTitle(string title)
+        {
+
+            _title = title;
+        }
+
+        public void EditDescription()
+        {
+            Console.WriteLine(Description);
+            Console.WriteLine("Edit Description and press enter");
+            _description = Console.ReadLine();
+        } 
+        
+        public void EditDescription(string description)
+        {
+            _description = description;
+        }
     }
 }
 
@@ -54,6 +92,5 @@ state and hide its implementation detail.
 
 properties for title, description, date/time, votes
 Methods to upvote, downvote, see how many votes, 
-Shoud
 
  */

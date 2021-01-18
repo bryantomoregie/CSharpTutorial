@@ -13,6 +13,8 @@ namespace CSharpTutorial
             algo.DownVote();
             Console.WriteLine(algo.Vote);
             Console.WriteLine(algo.DateTime);
+            algo.EditTitle("Im working");
+            Console.WriteLine(algo.Title); 
         }
     }
 }
