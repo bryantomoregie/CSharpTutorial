@@ -10,6 +10,11 @@ namespace CSharpTutorial
         {
             int[,] array2d = new int[3, 4] { {1, 3, 5, 7 }, {10, 11, 16, 20 }, {23, 30, 34, 60 } };
 
+            var jaggedArry = new int[3][];
+
+      
+
+
             //for (int i = 0; i < array2d.Length; i++)
             //{
             //    if(Array.BinarySearch(array2d[i], 3))
