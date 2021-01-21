@@ -6,11 +6,13 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Text text = new Text();
-            Console.WriteLine(text is PresentationObject);
-            text.Width = 10;
-            text.Height = 15;
-            Console.WriteLine(text.Width);
+            int[][] arr =
+            {
+                new int[] { 1, 3, 5 },
+                new int[] { 0, 2, 4},
+                new int[] { 11, 22, 9 }
+            };
+            Console.WriteLine(_12121.MaximumWealth(arr) ); 
             
         }
     }
