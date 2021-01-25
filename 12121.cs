@@ -15,9 +15,10 @@ namespace CSharpTutorial
 
             foreach (var element in accounts)
             {
-                if (max < element.Sum()){
-                    max = element.Sum();
-                }
+                //if (max < element.Sum()){
+                //    max = element.Sum();
+                //}
+                max = Math.Max(max, element.Sum());
             }
 
             return max;

@@ -9,7 +9,7 @@ namespace CSharpTutorial
     {
         public static string Solution(string str)
         {
-            string newString = String.Empty;
+            string newString = string.Empty;
             int length = str.Length - 1;
 
             for (int i = length; i >= 0; i--)
@@ -20,7 +20,7 @@ namespace CSharpTutorial
             return newString;
         }
 
-        public static string PrinterError(String s)
+        public static string PrinterError(string s)
         {
             var denominator = s.Length;
             var numerator = denominator;

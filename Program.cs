@@ -6,14 +6,15 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            int[][] arr =
-            {
-                new int[] { 1, 3, 5 },
-                new int[] { 0, 2, 4},
-                new int[] { 11, 22, 9 }
-            };
-            Console.WriteLine(_12121.MaximumWealth(arr) ); 
-            
+            //Installer installer = new Installer(new Logger());
+            //installer.Install();
+
+            //DBMigrator dBMigrator = new DBMigrator(new Logger());
+            //dBMigrator.Migrate();
+
+            Console.WriteLine(Swap.SwapCharacters()); 
+
+
         }
     }
 }
