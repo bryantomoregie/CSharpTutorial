@@ -4,17 +4,24 @@ namespace CSharpTutorial
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            //Installer installer = new Installer(new Logger());
-            //installer.Install();
+            DBMigrator dBMigrator = new DBMigrator(new FileLogger("C:\\Temp\\info.txt"));
+            dBMigrator.Migrate();
+        }
 
-            //DBMigrator dBMigrator = new DBMigrator(new Logger());
-            //dBMigrator.Migrate();
+        public static void Swap(int[] array, int a, int b)
+        {
+            int index2 = array[b];
+            array[b] = array[a];
+            array[a] = index2;
+        }
 
-            Console.WriteLine(Swap.SwapCharacters()); 
-
-
+        public enum times
+        {
+            second = 60,
+            mintue = 3600
         }
     }
 }

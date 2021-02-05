@@ -6,16 +6,16 @@ namespace CSharpTutorial
 {
     class DBMigrator
     {
-        private Logger _logger;
+        private ILogger _logger;
 
-        public DBMigrator(Logger logger)
+        public DBMigrator(ILogger logger)
         {
             _logger = logger;
         }
 
         public void Migrate()
         {
-            _logger.Log("Migration completed");
+            _logger.LogInfo("Migration completed");
         }
     }
 }
