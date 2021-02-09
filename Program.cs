@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpTutorial.Connection3;
+using System;
 
 namespace CSharpTutorial
 {
@@ -7,21 +8,12 @@ namespace CSharpTutorial
 
         static void Main(string[] args)
         {
-            DBMigrator dBMigrator = new DBMigrator(new FileLogger("C:\\Temp\\info.txt"));
-            dBMigrator.Migrate();
+            SqlConnection1 sqlConnection1 = new SqlConnection1("connectionString");
+            DBCommand1 dBCommand1 = new DBCommand1(sqlConnection1, "SELECT * FROM Table WHERE id = 1");
+            Console.WriteLine(dBCommand1.ConnectionString);
+            dBCommand1.Execute();
         }
 
-        public static void Swap(int[] array, int a, int b)
-        {
-            int index2 = array[b];
-            array[b] = array[a];
-            array[a] = index2;
-        }
-
-        public enum times
-        {
-            second = 60,
-            mintue = 3600
-        }
+      
     }
 }
