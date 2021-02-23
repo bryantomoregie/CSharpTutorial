@@ -1,4 +1,5 @@
-﻿using CSharpTutorial.Connection3;
+﻿using CSharpTutorial.Algo;
+using CSharpTutorial.Connection3;
 using CSharpTutorial.Workflow;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            Workflow2 workflow2 = new Workflow2();
-            WorkflowEngine.Run(workflow2);
+            string s = "([)]";
+            Console.WriteLine(Solution.IsValid(s));
 
         }
 
