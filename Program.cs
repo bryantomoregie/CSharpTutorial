@@ -1,19 +1,20 @@
 ﻿using CSharpTutorial.Connection3;
+using CSharpTutorial.Workflow;
 using System;
+using System.Collections.Generic;
 
 namespace CSharpTutorial
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            SqlConnection1 sqlConnection1 = new SqlConnection1("connectionString");
-            DBCommand1 dBCommand1 = new DBCommand1(sqlConnection1, "SELECT * FROM Table WHERE id = 1");
-            Console.WriteLine(dBCommand1.ConnectionString);
-            dBCommand1.Execute();
+            Workflow2 workflow2 = new Workflow2();
+            WorkflowEngine.Run(workflow2);
+
         }
 
-      
     }
 }
+
+

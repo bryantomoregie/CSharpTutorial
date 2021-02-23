@@ -10,8 +10,10 @@ namespace CSharpTutorial
 
         public TimeSpan Timeout { get; set; }
 
-        public DbConnection1()
+        public DbConnection1(string connectionString)
         {
+            ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString), "Parameter cannot be null");
+
             /*Example ask for this class to be instantiated with a connectionString,
             but the two derived classes have two different connectionStrings.
             Makes more sense to me to initialize the derived classes with their unique 

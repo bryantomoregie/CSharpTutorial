@@ -6,14 +6,9 @@ namespace CSharpTutorial
 {
     public class OracleConnection1 : DbConnection1
     {
-
-
-
-        public OracleConnection1(string connectionString)
+        public OracleConnection1(string connectionString) : base(connectionString)
         {
-            ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString), "Parameter cannot be null");
         }
-
 
         public override string Open()
         {
