@@ -11,8 +11,29 @@ namespace CSharpTutorial.Algo
             int length = s.Length;
             Stack<char> stack = new Stack<char>();
 
+            var openBrakets = new char[] { '(', '[', '{' };
+
             for (int i = 0; i < length; i++)
             {
+
+
+                //var curentIndex = Array.IndexOf(openBrakets, s[i]);
+                //if (curentIndex < 3 && curentIndex!= -1)
+                //{
+                //    stack.Push(s[i]);
+                //}
+
+                //else
+                //{
+                //    stack.Peek() == s[i];  //pop
+                //    return false;
+
+                //}
+        
+                //        //close
+
+
+
                 if (s[i] == '(')
                 {
                     stack.Push(')');

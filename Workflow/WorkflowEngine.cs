@@ -6,9 +6,14 @@ namespace CSharpTutorial.Workflow
 {
     class WorkflowEngine
     {
-        public static void Run(IWorkflow workflow)
+        readonly IWorkflow _workflow;
+        public WorkflowEngine(IWorkflow workflow)
         {
-            workflow.Instructions();
+            _workflow = workflow;
+        }
+        public void Run()
+        {
+            _workflow.Instructions();
         }
     }
 }
