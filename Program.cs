@@ -12,8 +12,8 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            string str = "AAAAAAAAAAAAABBCCCCDD";
-           System.Console.WriteLine(RunLengthEncoding(str));
+            int[] arr = new int[]{1, 2, 3, 5, 6, 8, 9};
+            Sorted.SortedSquaredArray(arr);
             
 
             // List<Transaction> list = new List<Transaction>();
@@ -55,30 +55,7 @@ namespace CSharpTutorial
         //     // return arr;
         // }
 
-        static string RunLengthEncoding(string str) {
-            StringBuilder sb = new StringBuilder();
-            int count = 1;
-            
-
-            for (int i = 1; i < str.Count(); i++)
-            {
-                char currentChar = str[i];
-                char previousChar = str[i - 1];
-
-                if(currentChar != previousChar || count == 9){
-                    sb.Append(count);
-                    sb.Append(previousChar);
-                    count = 1;
-                }else{
-                    count++;
-                }
-            }
-
-            sb.Append(count);
-            sb.Append(str[str.Length - 1]);
-
-            return sb.ToString();
-	    }
+       
 
   
     }  
