@@ -12,55 +12,23 @@ namespace CSharpTutorial
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[]{1, 2, 3, 5, 6, 8, 9};
-            Sorted.SortedSquaredArray(arr);
+
+
+            //var list = new List<string>()
+            //{
+            //    "yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"
+            //};
+            var list = new List<string>()
+            {
+                "yo", "act", "oy", "yo", "cat"
+            };
+            Console.WriteLine(AlgoExper.GroupAnagram.groupAnagrams(list));
             
 
-            // List<Transaction> list = new List<Transaction>();
-            
-            // list.Add(new Transaction(500, true, "system"));
-            // list.Add(new Transaction(15, false, "ach"));
-            // list.Add(new Transaction(100, false, "card"));
-            // list.Add(new Transaction(50, false, "card"));
-            // list.Add(new Transaction(75, true, "ach"));
 
-            // List<string> categoriesRequested  = new List<string>();
-            // categoriesRequested.Add("ach");
-            // categoriesRequested.Add("card");
-            // //categoriesRequested.Add("system");
-
-
-
-            // Transform(list, categoriesRequested);
-            
         }
 
-        //TransactionLIst -> Non-Public Members -> Results View -> 
+        
 
-        // public static int[] Transform(List<Transaction> transactions, List<string> categoriesRequested){
-        //     //https://www.google.com/search?q=linq+query+to+select+matching+myltiple+values&oq=linq+query+to+select+matching+myltiple+values&aqs=chrome..69i57j33i10i22i29i30.17171j0j7&sourceid=chrome&ie=UTF-8
-        //     return (from p in GetProducts()
-        //     where prodIDs.Contains(p.ProductID)
-        //     select p).ToArray<Product>();
-        //     // IEnumerable<int> transactionList;
-        //     // foreach (var category in categoriesRequested)
-        //     // {
-        //     //     transactionList =
-        //     //     from transaction in transactions
-        //     //     where transaction.Category == category
-        //     //     select transaction.Amount;
-        //     // }
-
-        //     // int[] arr = transactionList.ToArray<int>();
-        //     // return arr;
-        // }
-
-       
-
-  
     }  
 }
-
-
-//"AAAAAAAAAAAAABBCCCCDD"
-//"9A4A2B4C2D"
